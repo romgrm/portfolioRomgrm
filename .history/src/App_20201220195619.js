@@ -14,9 +14,15 @@ function App() {
       <AnimatePresence>
         <Navigation />
         <Switch location={location} key={location.pathname}>
-          <Route path="/work" component={Work} />
-          <Route path="/about" component={About} />
-          <Route path="/" component={Body} /> 
+          <Route path="/work" component={Work}>
+            <Work />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/">
+            <Body />
+          </Route>
         </Switch>
       </AnimatePresence>
     </>

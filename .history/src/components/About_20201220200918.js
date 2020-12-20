@@ -1,12 +1,13 @@
 import React from 'react'
 import { motion } from "framer-motion";
 
-export default function Work() {
+
+export default function About() {
 
     const pageVariants = {
         initial: {
             opacity: 0,
-            x: "100vw",
+            x: "-100vw",
             scale: 0.8
         },
         in: {
@@ -16,7 +17,7 @@ export default function Work() {
         },
         out: {
             opacity: 0,
-            x: "-100vw",
+            x: "100vw",
             scale: 1.2
         }
     };
@@ -30,7 +31,6 @@ export default function Work() {
     const pageStyle = {
         position: "absolute"
     };
-
     return (
         <motion.div
             style={pageStyle}

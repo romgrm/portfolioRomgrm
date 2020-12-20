@@ -8,7 +8,7 @@ export default function Body() {
     const pageVariants = {
         initial: {
             opacity: 0,
-            x: "100vw",
+            x: "-100vw",
             scale: 0.8
         },
         in: {
@@ -18,7 +18,7 @@ export default function Body() {
         },
         out: {
             opacity: 0,
-            x: "-100vw",
+            x: "100vw",
             scale: 1.2
         }
     };
@@ -36,7 +36,7 @@ export default function Body() {
         <motion.div
             className="min-h-screen flex items-center justify-center"
             style={{
-                background: '#00000'
+                background: '#000'
             }}
             style={pageStyle}
             initial="initial"
@@ -44,7 +44,6 @@ export default function Body() {
             exit="out"
             variants={pageVariants}
             transition={pageTransition}>
-
             <div className="ml-5 text-white">
                 <h3 className="text-9xl">{content.header.text[0]}<br />
                     {content.header.text[1]}<br />

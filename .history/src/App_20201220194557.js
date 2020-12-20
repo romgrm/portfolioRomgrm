@@ -7,18 +7,22 @@ import { Switch, Route, NavLink, useLocation } from "react-router-dom";
 
 
 function App() {
-
-  const location = useLocation();
   return (
     <>
-      <AnimatePresence>
+      <Router>
         <Navigation />
-        <Switch location={location} key={location.pathname}>
-          <Route path="/work" component={Work} />
-          <Route path="/about" component={About} />
-          <Route path="/" component={Body} /> 
+        <Switch>
+          <Route path="/work">
+            <Work />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/">
+            <Body />
+          </Route>
         </Switch>
-      </AnimatePresence>
+      </Router>
     </>
   );
 }

@@ -6,7 +6,7 @@ export default function Work() {
     const pageVariants = {
         initial: {
             opacity: 0,
-            x: "100vw",
+            x: "-100vw",
             scale: 0.8
         },
         in: {
@@ -16,7 +16,7 @@ export default function Work() {
         },
         out: {
             opacity: 0,
-            x: "-100vw",
+            x: "100vw",
             scale: 1.2
         }
     };
@@ -40,11 +40,8 @@ export default function Work() {
             variants={pageVariants}
             transition={pageTransition}>
             <h1 className=" text-center text-6xl" id="work">WORK</h1>
-            <p>
-            Magna culpa occaecat mollit ea ipsum sunt consectetur velit est minim. Esse dolor eu irure deserunt voluptate occaecat 
-            fugiat sint non ut sint mollit excepteur dolor. Culpa aliquip id mollit occaecat duis voluptate dolore dolore sint irure 
-            pariatur aute. Reprehenderit et dolor adipisicing commodo ullamco.
-            </p>
+            
+
         </motion.div>
     )
 }

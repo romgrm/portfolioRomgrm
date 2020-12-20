@@ -2,49 +2,14 @@ import React from 'react'
 import content from '../content/index'
 import Typical from 'react-typical'
 import {Link} from 'react-router-dom'
-import { motion } from "framer-motion";
-
 export default function Body() {
-    const pageVariants = {
-        initial: {
-            opacity: 0,
-            x: "100vw",
-            scale: 0.8
-        },
-        in: {
-            opacity: 1,
-            x: 0,
-            scale: 1
-        },
-        out: {
-            opacity: 0,
-            x: "-100vw",
-            scale: 1.2
-        }
-    };
-
-    const pageTransition = {
-        type: "tween",
-        ease: "anticipate",
-        duration: 0.5
-    };
-
-    const pageStyle = {
-        position: "absolute"
-    };
+    
     return (
-        <motion.div
+        <div
             className="min-h-screen flex items-center justify-center"
             style={{
-                background: '#00000'
-            }}
-            style={pageStyle}
-            initial="initial"
-            animate="in"
-            exit="out"
-            variants={pageVariants}
-            transition={pageTransition}>
-
+                background: '#000'
+            }}>
             <div className="ml-5 text-white">
                 <h3 className="text-9xl">{content.header.text[0]}<br />
                     {content.header.text[1]}<br />
@@ -62,6 +27,6 @@ export default function Body() {
                 <img src={content.header.img}></img>
             </div>
 
-        </motion.div>
+        </div>
     )
 }

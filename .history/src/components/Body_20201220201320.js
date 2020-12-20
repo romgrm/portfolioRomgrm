@@ -36,7 +36,7 @@ export default function Body() {
         <motion.div
             className="min-h-screen flex items-center justify-center"
             style={{
-                background: '#00000'
+                background: '#000'
             }}
             style={pageStyle}
             initial="initial"

@@ -16,7 +16,7 @@ export default function Work() {
         },
         out: {
             opacity: 0,
-            x: "-100vw",
+            x: "100vw",
             scale: 1.2
         }
     };
