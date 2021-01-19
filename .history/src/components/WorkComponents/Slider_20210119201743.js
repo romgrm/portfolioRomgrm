@@ -15,33 +15,20 @@ const projects = [
     "/Project2.jpg",
     "Project3.jpg",
 ]
-export default  function Slider() {
+export default function Slider() {
 
-    const [style, set] = useSpring(() => ({
-             transform: "perspective(500px) rotateY(0deg)"
-    }));
-
-    const clamp = (value, clampAt = 30) => {
-        if(value > 0){
-            return value > clampAt ? clampAt : value;
-        }else{
-            return value < -clampAt ? -clampAt : value;
-        }
-    }
-
-    const bind = useScroll(event => {
-        set({
-            transform: `perspective(500px) rotateY(${
-                event.scrolling ? clamp(event.delta[0]) : 0
-            }deg)`
-        })
-    })
+    const style = useSpring({
+        from: {
+             transform: "rotateY(-180deg)"
+        },
+         transform: "rotateX(180deg)"
+    });
     return (
-        <div className="container" {...bind()}>
+        <div className="container">
             {projects.map(items => (
                 <animated.div
                     key={items}
-                    className="card"
+                    className="div"
                     style={{...style, backgroundImage: `url(${items})`}}
                 />
             ))}

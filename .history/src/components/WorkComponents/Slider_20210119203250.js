@@ -32,7 +32,7 @@ export default  function Slider() {
     const bind = useScroll(event => {
         set({
             transform: `perspective(500px) rotateY(${
-                event.scrolling ? clamp(event.delta[0]) : 0
+                event.scrolling ? event.delta[0] : 0
             }deg)`
         })
     })
